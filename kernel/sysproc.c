@@ -91,16 +91,17 @@ sys_uptime(void)
 }
 //added
 uint64
-sys_sysinfo(void)
-{
-    int n;
-    argint(0, &n);
-    return get_sysinfo(n);
+sys_sysinfo(void){
+    int i;
+    argint(0, &i);
+
+    return get_sysinfo(i);
 }
 //added
 uint64
 sys_procinfo(void){
-    uint64 addr;
-    argaddr(0, &addr);
-    return get_procinfo((struct pinfo*)addr);
+    uint64 p_add;
+    argaddr(0, &p_add);
+
+    return get_procinfo((struct pinfo*)p_add);
 }
