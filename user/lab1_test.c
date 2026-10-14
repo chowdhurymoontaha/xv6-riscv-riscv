@@ -46,6 +46,7 @@ int main(int argc, char *argv[])
 			continue;
 		}
 	}
+    
 	sleep(1);
 	print_sysinfo();
 	for (int i = 0; i < n_proc; i++) kill(proc_pid[i]);
